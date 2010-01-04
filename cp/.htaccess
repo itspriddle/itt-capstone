@@ -1,0 +1,23 @@
+AuthUserFile /home/priddle/.htpasswds/mr_admin
+AuthName "Movierack Administration"
+AuthType Basic
+<Limit GET POST>
+require valid-user
+</Limit>
+
+
+Options +FollowSymlinks
+RewriteEngine on
+
+
+RewriteRule ^home$													index.php										[nc]
+
+RewriteRule ^(shows|movies)/?(manage)?$								index.php?page=$1&action=manage					[nc]
+RewriteRule ^(shows|movies)/browse/?([0-9]+)?$						index.php?page=$1&action=manage&start=$2		[nc]
+RewriteRule ^(shows|movies)/(edit|delete)$							index.php?page=$1&action=$2						[nc]
+RewriteRule ^(shows|movies)/(edit|delete)/([0-9]+)?$				index.php?page=$1&action=$2&movie_id=$3			[nc]
+RewriteRule ^(shows|movies)/add$									index.php?page=$1&action=add					[nc]
+RewriteRule ^movies/add/lookup/(imdbids|details)$					index.php?page=movies&action=add&lookup=$1		[nc]
+RewriteRule ^users/?$												index.php?page=users&action=manage				[nc]
+RewriteRule ^users/?(add|manage|edit|delete)?/?([0-9]+)?$			index.php?page=users&action=$1&user_id=$2		[nc]
+

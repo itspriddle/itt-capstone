@@ -1,0 +1,951 @@
+/*
+Theme Name: SpotMilk
+Theme URI: http://www.ceprix.net/archives/spotmilk-admin-theme-for-wordpress/
+Description: SpotMilk is an admin theme for WordPress 2.0.x, which is originally inspired by Spotlight on Mac OS X Tiger and the Milk theme by Max Rudberg, and its overall main layout remains based on the default admin theme that comes with WP 2.0.x.
+Author: Sunghwa Park
+Version: 1.7.2 (11/05/2006)
+Author URI: http://www.ceprix.net/
+
+SpotMilk has been tested in Safari 2, Firefox 2, Camino 1, Opera 9, and IE6 & 7, and it should work properly with all the mentioned browsers.
+This theme is compatible with the English, French, German, Spanish, Italian, Danish, Finnish, Portuguese, Chinese, Japanese, and Korean versions of WordPress 2.0.x.
+Fonts are in order of English/Western European languages > Japanese > Chinese > Korean.
+
+Also, the theme is totally free of charge on the condition that you do NOT use it commercially.
+Please, email me at ceprix [at] gmail [dot] com if you would like to make any corrections or suggestions on the theme.
+Thank you for using the theme.
+*/
+
+/*** General ***/
+a {
+	color: #2a65f1;
+	border: none;
+	text-decoration: none;
+	}
+a:visited {
+	color: #46a1fb;
+	}
+a:hover {
+	color: #46a1fb;
+	border-bottom: 1px solid #46a1fb;
+	}
+a.edit, a.delete {
+	padding: 3px !important;
+	height: 15px;
+	background: #ccc url(images/button.png) repeat-x;
+	color: #242424;
+	font: 12px "Lucida Sans", "Lucida Sans Unicode", Verdana, "Hiragino Maru Gothic Pro", "ヒラギノ丸ゴ Pro W4", "MS PGothic", "MS Pゴシック", "LiHei Pro", "儷黑 Pro", NSimSun, AppleGothic, Dotum, 돋움, sans-serif;
+	text-shadow: 0 2px 2px #fff;
+	border: 1px solid #b6b6b6 !important;
+	white-space: nowrap;
+	}
+a.edit:visited, a.delete:visited {
+	color: #242424;
+	}
+a.edit:hover, a.delete:hover, #deletepost:hover {
+	background: #fff url(images/button-hover.png) repeat-x;
+	color: #252525;
+	}
+body {
+	background: #f6f6f6;
+	color: #222;
+	}
+body, td, th {
+	font: 12px "Lucida Grande", "Lucida Sans Unicode", Verdana, "Hiragino Maru Gothic Pro", "ヒラギノ丸ゴ Pro W4", "MS PGothic", "MS Pゴシック", "LiHei Pro", "儷黑 Pro", NSimSun, AppleGothic, Dotum, 돋움, sans-serif;
+	}
+fieldset label.selectit {
+	background: #fff;
+	}
+fieldset label.selectit:hover {
+	background: #f6f6f6;
+	}
+fieldset legend {
+	font: 14px "Helvetica Neue", "Microsoft Sans Serif", Arial, "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", "MS UI Gothic", Hei, SimHei, "Malgun Gothic", Gulim, 굴림, sans-serif !important;
+	}
+fieldset legend a:hover {
+	border: none;
+	}
+fieldset legend em {
+	font-size: 12px;
+	}
+fieldset.options legend {
+	font-size: 14px !important;
+	}
+h2 {
+	padding: 5px 10px;
+	background: url(images/fade-butt.png) repeat-x;
+	font: bold 16px "Helvetica Neue", "Microsoft Sans Serif", Arial, "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", "MS UI Gothic", Hei, SimHei, "Malgun Gothic", Gulim, 굴림, sans-serif;
+	text-shadow: 0 2px 2px #fff;
+	border: 1px solid #ccc;
+	}
+h2 small.quickjump {
+	display: none;
+	} /* Disabled due to positioning issues, plus it is not worth to keep */
+h3 {
+	font: bold 14px "Helvetica Neue", "Microsoft Sans Serif", Arial, "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", "MS UI Gothic", Hei, SimHei, "Malgun Gothic", Gulim, 굴림, sans-serif;
+	color: #333;
+	}
+h3 a:hover {
+	text-decoration: none;
+	}
+h4 {
+	padding: 2px;
+	font: bold 14px "Helvetica Neue", "Microsoft Sans Serif", Arial, "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", "MS UI Gothic", Hei, SimHei, "Malgun Gothic", Gulim, 굴림, sans-serif;
+	color: #333;
+	}
+h4 a:hover {
+	text-decoration: underline;
+	border: none;
+	}
+ul li {
+	margin: .2em 0;
+	list-style: url(images/bullet.png);
+	line-height: 1.5;
+	vertical-align: middle;
+	}
+img {
+	margin: 0;
+	padding: 0;
+	border: none;
+	}
+input, select, textarea {
+	padding: 2px !important;
+	background: #fff;
+	font: 12px "Lucida Sans", "Lucida Sans Unicode", Verdana, "Hiragino Maru Gothic Pro", "ヒラギノ丸ゴ Pro W4", "MS PGothic", "MS Pゴシック", "LiHei Pro", "儷黑 Pro", NSimSun, AppleGothic, Dotum, 돋움, sans-serif;
+	color: #242424;
+	border: 1px solid #b6b6b6 !important;
+	}
+input:focus, label:focus, select:focus, textarea:focus {
+	background: #edf3fe;
+	color: #252525;
+	border-color: #666;
+	}
+input[type=button], input[type=reset], input[type=submit], .submit input {
+	background: #ccc url(images/button.png) repeat-x;
+	}
+input[type=button]:hover, input[type=reset]:hover, input[type=submit]:hover, .submit input:hover {
+	background: #fff url(images/button-hover.png) repeat-x;
+	color: #252525;
+	}
+input[type=checkbox], input[type=file], input[type=radio] {
+	border: none !important;
+	}
+p, li, dl, dd, dt {
+	line-height: 1.3;
+	}
+table {
+	margin: 10px 0;
+	width: 100%;
+	border: 1px solid #ccc;
+	border-width: 1px 0;
+	border-collapse: collapse;
+	}
+td {
+	padding: 3px 5px;
+	border: 1px solid #ccc !important;
+	border-width: 0 1px;
+	}
+th {
+	padding: 0 5px;
+	height: 20px;
+	background: #f6f6f6;
+	color: #333;
+	border: 1px solid #ccc !important;
+	line-height: 2.5;
+	border-width: 0 1px;
+	white-space: nowrap;
+	}
+.active td {
+	background: #e7edf6 !important;
+	}
+.alternate {
+	background: #fff !important;
+	}
+.anchors {
+	margin: 10px 20px;
+	}
+.available-theme a.screenshot {
+	height: 187px;
+	margin: auto;
+	padding: 2px;
+	background: #f6f6f6 url(images/screenshot-not-available.jpg) no-repeat 2px 2px;
+	border: 1px solid #ccc;
+	}
+.available-theme a.screenshot:hover {
+	background-color: #e7edf6;
+	border: 1px solid #b6b6b6;
+	}
+.available-theme h3 a:hover, #currenttheme h3 a:hover {
+	border: none;
+	text-decoration: underline;
+	}
+.code {
+	font: 11px "Courier New", Courier, monospace;
+	}
+.commentlist li {
+	border-bottom: none;
+	padding: 0.5em 1em;
+	}
+.copyright a, a:hover {
+	text-decoration: none;
+	}
+.quicktags, .search {
+	background: #f6f6f6;
+	color: #222;
+	font: 12px "Lucida Sans", "Lucida Sans Unicode", Verdana, "Hiragino Maru Gothic Pro", "ヒラギノ丸ゴ Pro W4", "MS PGothic", "MS Pゴシック", "LiHei Pro", "儷黑 Pro", NSimSun, AppleGothic, Dotum, 돋움, sans-serif;
+	}
+.submit, .editform th, #postcustomsubmit {
+	text-align: left;
+	}
+.togl {
+	font-size: 12px;
+	font-weight: normal !important;
+	text-align: center;
+	}
+.updated {
+	padding-left: 4em;
+	background: #e7edf6 url(images/notification.png) no-repeat 1em !important;
+	color: #333;
+	font: bold italic 14px Georgia, Times, "Times New Roman", "Hiragino Mincho Pro", "ヒラギノ明朝 Pro W3", "MS PMincho", "MS P明朝", "LiSong Pro", "儷宋 Pro", PMingLiU, AppleMyungjo, Batang, 바탕, serif;
+	border: 1px solid #ccc !important;
+	/* border-radius: 10px; */
+	}
+.wrap {
+	/* border-radius: 10px; */
+	}
+.wrap h2 {
+	padding-bottom: 5px;
+	}
+#adminmenu {
+	padding: 3px 10px 4px 10px;
+	height: 22px;
+	background: url(images/fade-butt.png) repeat-x;
+	font-family: "Helvetica Neue", "Microsoft Sans Serif", Arial, "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", "MS UI Gothic", Hei, SimHei, "Malgun Gothic", Gulim, 굴림, sans-serif;
+	border-top: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+	vertical-align: middle;
+	white-space: nowrap;
+	}
+#adminmenu a {
+	padding: 5px 10px;
+	font-size: 16px;
+	color: #333;
+	text-shadow: 0 2px 2px #fff;
+	font-weight: bold;
+	border-top: none;
+	border-right: 1px solid transparent;
+	border-bottom: none;
+	border-left: 1px solid transparent;
+	}
+#adminmenu a:hover, #adminmenu .current {
+	background: url(images/fade-butt-hover.png) repeat-x;
+	color: #2c2c2c;
+	border-right: 1px solid #ccc;
+	border-bottom: none;
+	border-left: 1px solid #ccc;
+	}
+#currenttheme img {
+	margin: 0 1em 1.5em 0;
+	padding: 2px;
+	width: 250px;
+	height: 187px;
+	background: #f6f6f6 url(images/screenshot-not-available.jpg) no-repeat 2px 2px;
+	border: 1px solid #ccc;
+	}
+#currenttheme img:hover {
+	background-color: #e7edf6;
+	border: 1px solid #b6b6b6;
+	}
+#bottommeta {
+	clear: both;
+	}
+#bottommeta a:hover {
+	text-decoration: none;
+	}
+#excerpt, .attachmentlinks {
+	margin-top: 10px;
+	width: 99%;
+	}
+#incominglinks li {
+	list-style: url(images/bullet-link.png) !important;
+	line-height: 1.5;
+	vertical-align: middle;
+	}
+#incominglinks ul {
+	padding: 0 0 0 1.2em !important;
+	}
+#login {
+	margin: 7em auto;
+	padding: 15px;
+	width: 28em;
+	background: #eee;
+	border: 1px solid #ccc;
+	/* border-radius: 10px; */
+	}
+#login .submit {
+	text-align: left;
+	}
+#login .submit input {
+	background: url(images/fade-butt.png) repeat-x;
+	}
+#login .submit input:hover {
+	background: #ddd url(images/fade-butt-hover.png) repeat-x;
+	}
+#login form {
+	margin: 0;
+	border-bottom: 1px solid #ccc;
+	}
+#login input {
+	font: 16px "Helvetica Neue", "Microsoft Sans Serif", Arial, "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", "MS UI Gothic", Hei, SimHei, "Malgun Gothic", Gulim, 굴림, sans-serif;
+	}
+#login #login_error {
+	margin-top: 15px;
+	padding: 0.5em 0 0.5em 4em;
+	height: 34px;
+	background: #e7edf6 url(images/notification.png) no-repeat 1em;
+	color: #333;
+	font: bold italic 14px Georgia, Times, "Times New Roman", "Hiragino Mincho Pro", "ヒラギノ明朝 Pro W3", "MS PMincho", "MS P明朝", "LiSong Pro", "儷宋 Pro", PMingLiU, AppleMyungjo, Batang, 바탕, serif;
+	border: 1px solid #ccc;
+	line-height: 2.5em;
+	}
+#login #loginform {
+	padding: 0 5.5em;
+	}
+#login #registerform, #login #lostpass {
+	padding: 0 3.2em;
+	}
+#login p {
+	font: 13px "Helvetica Neue", "Microsoft Sans Serif", Arial, "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", "MS UI Gothic", Hei, SimHei, "Malgun Gothic", Gulim, 굴림, sans-serif;
+	}
+#login h1 {
+	margin: 0 auto;
+	width: 200px;
+	height: 50px;
+	background: url(images/wordpress-logo.png) center center no-repeat;
+	text-align: center;
+	}
+#login h1 a {
+	display: block;
+	text-indent: -9999px;
+	}
+#login h1 a:hover {
+	border-bottom: none;
+	}
+#login h2 {
+	margin-left: 3em;
+	padding: 0;
+	font-size: 13px;
+	font-weight: normal;
+	text-shadow: none;
+	background: none;
+	border: none;
+	}
+#login input {
+	padding: 3px;
+	}
+#login ul {
+	margin: 0;
+	padding: 15px 0 0 0;
+	border-top: 1px solid #f6f6f6;
+	list-style: none;
+	text-align: center;
+	}
+#login ul li {
+	display: inline;
+	margin: 0;
+	padding: 0 .4em;
+	height: 13px;
+	}
+#login ul li a {
+	padding: 3px;
+	color: #242424;
+	background: #ccc url(images/button.png) repeat-x;
+	font-size: 11px;
+	text-shadow: 0 2px 2px #fff;
+	border: 1px solid #ccc;
+	white-space: nowrap;
+	}
+#login ul li a:hover {
+	color: #252525;
+	background: #fff url(images/button-hover.png) repeat-x;
+	}
+#login ul li a:visited {
+	color: #242424;
+	}
+#planetnews ul {
+	padding: 0 0 0 25px;
+	}
+#planetnews li {
+	float: none;
+	margin: 0;
+	padding: 0;
+	width: auto;
+	font: bold 14px "Helvetica Neue", "Microsoft Sans Serif", Arial, sans-serif;
+	list-style: url(images/bullet-news.png);
+	vertical-align: middle;
+	line-height: 1.8;
+	}
+#planetnews li a {
+	display: inline;
+	height: auto;
+	background: none;
+	overflow: visible;
+	}
+#planetnews li a:hover {
+	text-decoration: underline;
+	border: none;
+	}
+#planetnews h3 a:hover {
+	border: none;
+	}
+#quicktags {
+	margin: 0 0 10px 10px;
+	text-align: left;
+	}
+#quicktags #ed_link {
+	color: #2a65f1;
+	}
+#quicktags #ed_code {
+	font-family: "Courier New", Courier, monospace;
+	}
+#submenu {
+	padding: 4px 4em 1px 4em;
+	background: #e6e6e6;
+	font-family: "Helvetica Neue", "Microsoft Sans Serif", Arial, "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", "MS UI Gothic", Hei, SimHei, "Malgun Gothic", Gulim, 굴림, sans-serif;
+	border-top: 1px solid #f5f5f5;
+	border-bottom: 1px solid #ccc;
+	text-decoration: none;
+	text-shadow: 0 2px 2px #fff;
+	}
+#submenu a {
+	padding: 3px 5px 4px;
+	color: #464646;
+	font-size: 13px;
+	font-weight: bold;
+	border-left: 1px solid transparent;
+	border-top: 1px solid transparent;
+	border-right: 1px solid transparent;
+	}
+#submenu a:hover, #submenu .current {
+	background: #f6f6f6;
+	color: #464646;
+	border-left-color: #ccc !important;
+	border-top-color: #ccc !important;
+	border-right: 1px solid #ccc !important;
+	border-bottom: 1px solid #f6f6f6 !important;
+	/* border-top-left-radius: 6px; */
+	/* border-top-right-radius: 6px; */
+	}
+#submenu li {
+	line-height: 1.7;
+	}
+#postexcerpt div, #attachmentlinks div {
+	margin: 0;
+	}
+#template textarea {
+	width: 99%;
+	}
+#title {
+	font-size: 16px;
+	}
+#user_info {
+	top: 0;
+	right: 0;
+	font: bold italic 14px Georgia, Times, "Times New Roman", "Hiragino Mincho Pro", "ヒラギノ明朝 Pro W3", "MS PMincho", "MS P明朝", "LiSong Pro", "儷宋 Pro", PMingLiU, AppleMyungjo, Batang, 바탕, serif;
+	}
+#user_info a[title] {
+	position: relative;
+	top: 2px;
+	right: -60px;
+	width: 100px;
+	padding: 2px 24px;
+	visibility: visible;
+	text-align: center;
+	}
+#user_info a:hover {
+	color: #222;
+	text-decoration: none;
+	text-shadow: 0 2px 2px #fff;
+	background: url(images/header-hover.png) no-repeat center;
+	border: none;
+	}
+#user_info p {
+	visibility: hidden;
+	}
+#wphead {
+	padding: 1px 5px 11px;
+	background: url(images/header.png) repeat-x;
+	}
+#wphead a {
+	color: #fff;
+	}
+#wphead a:hover {
+	border: none;
+	}
+#wphead h1 {
+	padding-top: 4px;
+	padding-left: 10px;
+	color: #fff;
+	font: bold italic 28px Georgia, Times, "Times New Roman", "Hiragino Mincho Pro", "ヒラギノ明朝 Pro W3", "MS PMincho", "MS P明朝", "LiSong Pro", "儷宋 Pro", PMingLiU, AppleMyungjo, Batang, 바탕, serif;
+	text-shadow: 0 0 6px #fff;
+	}
+#wphead h1 span {
+	visibility: hidden;
+	font-size: 14px;
+	text-shadow: none;
+	}
+#wphead h1 span a {
+	width: 100px;
+	padding: 2px 20px;
+	visibility: visible;
+	text-align: center;
+	text-indent: -9999px;
+	}
+#wphead h1 span a:hover {
+	color: #222;
+	text-decoration: none;
+	text-shadow: 0 2px 2px #fff;
+	background: url(images/header-hover.png) no-repeat center;
+	}
+#your-profile fieldset input  {
+	font-size: 12px;
+	}
+#your-profile legend {
+	font: bold 14px "Helvetica Neue", "Microsoft Sans Serif", Arial, "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", "MS UI Gothic", Hei, SimHei, "Malgun Gothic", Gulim, 굴림, sans-serif !important;
+	}
+#zeitgeist {
+	width: 30%;
+	background: #f6f6f6;
+	border: 1px solid #ccc;
+	}
+#zeitgeist h2 {
+	padding: 0;
+	background: none;
+	font-size: 16px;
+	font-weight: bold;
+	border: none;
+	}
+#zeitgeist h3 {
+	padding-bottom: 3px;
+	font-size: 14px;
+	font-weight: bold;
+	border: none;
+	}
+#zeitgeist h3 a:hover {
+	border: none;
+	}
+#zeitgeist li {
+	list-style: url(images/bullet-post.png);
+	line-height: 1.5;
+	vertical-align: middle;
+	}
+#zeitgeist ul {
+	padding: 0 0 0 1em;
+	}
+
+/*** Default Box Styles ***/
+/* Box stuff */
+#grabit {
+	width: auto;
+	}
+/* Toggle state of inner content area */
+#moremeta .dbx-content {
+	padding: 5px 2px;
+	background-color: #fff;
+	background-image: none;
+	}
+#moremeta fieldset.dbx-box-closed {
+	padding: 0;
+	background-color: #fff;
+	background-image: none;
+	}
+/* Handles */
+.dbx-handle {
+	height: 18px;
+	color: #fff;
+	font-size: 13px;
+	}
+#advancedstuff .dbx-handle {
+	padding-left: 5px;
+	color: #464646;
+	font-weight: bold;
+	text-shadow: 0 2px 2px #fff;
+	background: #e6e6e6;
+	border: 1px solid #ccc;
+	}
+#advancedstuff .dbx-box {
+	border: none;
+	}
+#moremeta .dbx-handle {
+	padding-left: 5px;
+	color: #464646;
+	font-weight: bold;
+	text-shadow: 0 2px 2px #fff;
+	background-color: #e6e6e6;
+	background-image: none;
+	}
+#moremeta .dbx-box {
+	background-color: #fff;
+	background-image: none;
+	border: 1px solid #ccc;
+	}
+/* Toggle images */
+a.dbx-toggle, a.dbx-toggle:visited {
+	background: url(images/inactive-toggle-buttons.png) no-repeat;
+	}
+a.dbx-toggle:hover {
+	background: url(images/active-toggle-buttons.png) no-repeat;
+	border: none !important;
+	}
+#moremeta a.dbx-toggle, #moremeta a.dbx-toggle-open:visited {
+	height: 23px;
+	width: 23px;
+	background-position: 0 0;
+	}
+#moremeta a.dbx-toggle-open, #moremeta a.dbx-toggle-open:visited {
+	height: 23px;
+	width: 23px;
+	background-position: 0 -26px;
+	}
+#advancedstuff a.dbx-toggle, #advancedstuff a.dbx-toggle-open:visited {
+	height: 23px;
+	width: 23px;
+	top: 3px;
+	right: 3px;
+	background-position: 0 0;
+	}
+#advancedstuff a.dbx-toggle-open, #advancedstuff a.dbx-toggle-open:visited {
+	height: 23px;
+	width: 23px;
+	top: 3px;
+	right: 3px;
+	background-position: 0 -26px;
+	}
+
+/*** Additional Code for WP 2.0.4 ***/
+#advancedstuff h3.dbx-handle {
+	margin: 5px 0;
+	padding: 5px;
+	background: #e6e6e6;
+	}
+#advancedstuff div.dbx-handle-wrapper {
+	margin: 0;
+	background: none;
+	}
+#advancedstuff div.dbx-content {
+	margin: 0;
+	padding: 5px 0;
+	background: none;
+	}
+#advancedstuff div.dbx-content-wrapper {
+	margin: 0;
+	background: none;
+	}
+#advancedstuff fieldset.dbx-box {
+	margin: 0;
+	padding: 0;
+	background: none;
+	}
+#advancedstuff div.dbx-box-wrapper {
+	background: none;
+	}
+#advancedstuff .dbx-box-closed div.dbx-content-wrapper {
+	padding-bottom: 0;
+	background: none;
+	}
+#advancedstuff .dbx-box {
+	background: none;
+	}
+#postexcerpt div.dbx-content {
+	margin-right: 0;
+	padding-right: 17px;
+	}
+
+/*** New WP Logo and Credits ***/
+#copyright, #logo {
+	font: italic 11px Georgia, Times, "Times New Roman", serif;
+	text-align: center;
+	}
+#copyright a:hover, #logo a:hover {
+	border: none;
+	}
+#footer {
+	display: none; /* Do NOT display the default WP logo */
+	}
+
+/*** For Other Plugins ***/
+/* Ultimate Tag Warrior */
+#tagsdiv .dbx-handle {
+	padding-left: 5px;
+	color: #464646;
+	font-size: 13px;
+	font-weight: bold;
+	text-shadow: 0 2px 2px #fff;
+	background: #e6e6e6;
+	border: 1px solid #ccc;
+	}
+#tagsdiv .dbx-handle a:hover {
+	border: none;
+	text-decoration: underline;
+	}
+#tagsdiv .dbx-content {
+	margin: 5px 0;
+	padding: 5px;
+	}
+
+/* Jerome's Keywords */
+#lptagstuff .dbx-handle {
+	padding-left: 5px;
+	color: #464646;
+	font-size: 13px;
+	font-weight: bold;
+	text-shadow: 0 2px 2px #fff;
+	background: #e6e6e6;
+	border: 1px solid #ccc;
+	}	
+#lptagstuff .dbx-content {
+	margin: 5px 0;
+	padding: 5px;
+	}
+
+/* PodPress */
+#podPressstuff .dbx-handle {
+	padding-left: 5px;
+	color: #464646;
+	font-size: 13px;
+	font-weight: bold;
+	text-shadow: 0 2px 2px #fff;
+	background: #e6e6e6;
+	border: 1px solid #ccc;
+	}
+#podPressstuff a.dbx-toggle, #podPressstuff a.dbx-toggle-open:visited {
+	height: 23px;
+	width: 23px;
+	background-position: 0 0;
+	}
+#podPressstuff a.dbx-toggle-open, #podPressstuff a.dbx-toggle-open:visited {
+	height: 23px;
+	width: 23px;
+	background-position: 0 -26px;
+	}
+
+/* ShortStat */
+#wp_shortstat, #wp_shortstat table, #wp_shortstat td, #wp_shortstat th {
+	color: #333 !important;
+	font-family: "Lucida Grande", "Lucida Sans Unicode", Verdana, sans-serif !important;
+	}
+#wp_shortstat a {
+	color: #2a65f1 !important;
+	}
+#wp_shortstat a:visited {
+	color: #2a65f1 !important;
+	}
+#wp_shortstat a:hover {
+	color: #46a1fb !important;
+	}
+#wp_shortstat .module {
+	margin: 0 12px 12px 0 !important;
+	border-top: none !important;
+	border-bottom: none !important;
+	font-family: "Lucida Grande", "Lucida Sans Unicode", Verdana, sans-serif !important;
+	}
+#wp_shortstat .module h3 {
+	padding: 12px 5px 2px 5px !important;
+	margin: 0 !important;
+	color: #464646 !important;
+	font: 11px "Lucida Grande", "Lucida Sans Unicode", Verdana, sans-serif !important;
+	background: #e6e6e6 !important;
+	text-shadow: 0 2px 2px #fff !important;
+	border-top: 1px solid #ccc !important;
+	border-bottom: 1px solid #ccc !important;
+	}
+#wp_shortstat .module div {
+	width: 100% !important;
+	}
+#wp_shortstat .module div table {
+	margin: 0 0 12px 0;
+	width: 100% !important;
+	background: #f5f5f5;
+	border-bottom: none !important;
+	}
+#wp_shortstat .module div table td {
+	padding: 3px 5px !important;
+	overflow: hidden;
+	}
+#wp_shortstat .waccents div table td span {
+	color: #2a65f1 !important;
+	}
+#wp_shortstat .module div table td.accent {
+	color: #565656 !important;
+	background: #e6e6e6 !important;
+	border-top: 1px solid #f6f6f6 !important;
+	text-shadow: none !important;
+	}
+#wp_shortstat .column {
+	font-family: "Lucida Grande", "Lucida Sans Unicode", Verdana, sans-serif !important;
+	margin: 0 12px 12px 0 !important;
+	}
+#wp_shortstat #donotremove {
+	padding-top: 15px;
+	font: italic 11px Georgia, Times, "Times New Roman", serif;
+	text-align: center;
+	}
+
+/* SlimStat */
+#wp_slimstat, #wp_slimstat table, #wp_slimstat td, #wp_slimstat th {
+	color: #333;
+	font: 10px "Lucida Grande", "Lucida Sans Unicode", Verdana, sans-serif;
+	}
+#wp_slimstat a {
+	color: #2a65f1 !important;
+	}
+#wp_slimstat a:visited {
+	color: #2a65f1 !important;
+	}
+#wp_slimstat a:hover {
+	color: #46a1fb !important;
+	}
+#wp_slimstat h3.wp_slimstat_tabs {
+	padding: 0 !important;
+	font: bold 13px "Helvetica Neue", "Microsoft Sans Serif", Arial, sans-serif !important;
+	border: none !important;
+ }
+#wp_slimstat h3.wp_slimstat_tabs a, #wp_slimstat h3.wp_slimstat_tabs a:visited {
+	color: #333 !important;
+	}
+#wp_slimstat h3.wp_slimstat_tabs a:hover {
+	color: #333 !important;
+	background: none !important;
+	text-decoration: underline;
+	}
+#wp_slimstat .module, #wp_slimstat .modulewide {
+	font-size: 10px !important;
+	border-bottom: none !important;
+	}
+#wp_slimstat .module h3, #wp_slimstat .modulewide h3 {
+	padding: 12px 5px 2px 5px !important;
+	color: #464646 !important;
+	font: 11px "Lucida Grande", "Lucida Sans Unicode", Verdana, sans-serif !important;
+	background: #e6e6e6 !important;
+	text-shadow: 0 2px 2px #fff !important;
+	border-top: 1px solid #ccc !important;
+	border-bottom: 1px solid #ccc !important;
+	}
+#wp_slimstat .configure, #wp_slimstat .configurewide {
+	padding: 0 !important;
+	font-size: 10px !important;
+	border: 1px solid #ccc !important;
+	}
+#wp_slimstat .configure div, #wp_slimstat .configurewide div {
+	padding: 5px;
+	}
+#wp_slimstat .configure h3, #wp_slimstat .configurewide h3 {
+	padding: 12px 5px 2px 5px !important;
+	color: #464646 !important;
+	font: 11px "Lucida Grande", "Lucida Sans Unicode", Verdana, sans-serif !important;
+	background: #e6e6e6 !important;
+	text-shadow: 0 2px 2px #fff !important;
+	border-top: none !important;
+	border-bottom: 1px solid #ccc !important;
+	}
+#wp_slimstat .module div table, #wp_slimstat .modulewide div table {
+	background: #f5f5f5;
+	}
+#wp_slimstat .module div table th, #wp_slimstat .modulewide div table th {
+	padding: 2px 5px !important;
+	color: #565656;
+	background: #e6e6e6 !important;
+	font-size: 9px;
+	border-top: 1px solid #f6f6f6 !important;
+	}
+#wp_slimstat .module div table td, #wp_slimstat .modulewide div table td {
+	font-size: 10px !important;
+	}
+#wp_slimstat #donotremove {
+	font: italic 11px Georgia, Times, "Times New Roman", serif;
+	}
+
+/* PopStats */
+#ps_popstats {
+	font-size: 11px !important;
+	}
+#ps_popstats td, #ps_popstats th {
+	font-size: 10px !important;
+	}
+#ps_popstats a {
+	color: #2a65f1 !important;
+	}	
+#ps_popstats a:visited {
+	color: #46a1fb !important;
+	}
+#ps_popstats a:hover {
+	color: #46a1fb !important;
+	border-bottom-color: #46a1fb !important;
+	text-decoration: none !important;
+	}
+.ps_table td {
+	background: #f5f5f5 !important;
+	}
+.ps_table th {
+	color: #464646 !important;
+	background: #e6e6e6 !important;
+	}
+.ps_subtable {
+	background-color: #fff !important;
+	}
+.ps_subtable td {
+	background-color: #f5f5f5 !important;
+	}
+.ps_statbar {
+	background-color: #46a1fb !important;
+	border-bottom-color: #46a1fb !important;
+	}
+.ps_statbar_av {
+	background-color: #2a65f1 !important;
+	border-bottom-color: #2a65f1 !important;
+	}
+
+/* Akismet */
+#spam-list li {
+	list-style: none;
+	}
+
+/* Canvas */
+#canvas_dropdown a {
+	border: none;
+	}
+#canvas_dropdown li, .content_wrap li {
+	list-style: none;
+	}
+
+/* aLinks */
+#graphsbox a.dbx-toggle, a.dbx-toggle:visited, #keyphrasebox a.dbx-toggle, a.dbx-toggle:visited {
+	background: url(images/inactive-toggle-buttons.png) no-repeat !important;
+	}
+#graphsbox a.dbx-toggle, #graphsbox a.dbx-toggle-open:visited, #keyphrasebox a.dbx-toggle, #keyphrasebox a.dbx-toggle-open:visited {
+	height: 23px !important;
+	width: 23px !important;
+	background-position: 0 0 !important;
+	}
+#graphsbox a.dbx-toggle-open, #graphsbox a.dbx-toggle-open:visited, #keyphrasebox a.dbx-toggle-open, #keyphrasebox a.dbx-toggle-open:visited {
+	height: 23px !important;
+	width: 23px !important;
+	background-position: 0 -26px !important;
+	}
+#graphsbox .dbx-content, #keyphrasebox .dbx-content {
+	margin-top: 10px !important;
+	background: none !important;
+	padding: 0 !important;
+	}
+#graphsbox .dbx-handle, #keyphrasebox .dbx-handle {
+	padding-left: 5px !important;
+	color: #464646;
+	font-weight: bold;
+	text-shadow: 0 2px 2px #fff;
+	background: #e6e6e6;
+	border: 1px solid #ccc;
+	}
+#graphsbox .dbx-box, #keyphrasebox .dbx-box {
+	background: none !important;
+	}
+
+/* More CSS may be added as I find out any essential plugins not being integrated with this theme. */

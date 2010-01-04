@@ -1,0 +1,83 @@
+/* CSS only needed for the demo */
+
+
+/* End css for the demo */
+
+/* CSS needed for the script */
+
+#ajax_tooltipObj{
+	z-index:1000000;
+	text-align:left;
+}
+#ajax_tooltipObj div{
+	position:relative;
+	left: 0px;
+	top: -5px;
+}
+
+/* If you don't want the arrow - Just set the width of this div to 1 or something like that and drop the background selectors from the CSS below */
+
+#ajax_tooltipObj .ajax_tooltip_arrow{	/* Left div for the small arrow */
+	/*background-image:url('../images/arrow.gif');*/
+	width:0px;
+	position:absolute;
+	left:0px;
+	top:0px;
+	z-index:1000005;
+	height:0px;
+}
+
+#ajax_tooltipObj .ajax_tooltip_content{
+	left:-8px;	/* Same as border thickness */
+	top:0px;
+	position:absolute;
+	width:308px;	/* Width of tooltip content */
+	/*height:200px;	/* Height of tooltip content */
+	padding:5px;	/* Space between border and content */
+	overflow:auto;	/* Hide overflow content */
+	z-index:1000001;
+}
+#movie-popup {                                                                    
+    display: block;
+	clear: none;
+    position: relative;                                                           
+    top: 0px;                                                                     
+    width: 308px;                                                                 
+    margin: 0;                                                                    
+    padding: 0;                                                                   
+    z-index: 20000000;                                                            
+}                                                                                 
+#movie-popup h3 {                                                                 
+    display: block;                                                               
+    width: 308px;                                                                 
+    height: 35px;                                                                 
+    line-height: 30px;                                                            
+    background: url('/images/gui/newreleases/tooltip/header.png') no-repeat;      
+    margin: 0;                                                                    
+    padding: 0;                                                                   
+    text-indent: 10px;                                                            
+    font-size: 10pt;                                                              
+    color: #fff;                                                                  
+}                                                                                 
+                                                                                  
+#movie-popup .footer {                                                            
+    width: 308px;                                                                 
+    height: 16px;                                                                 
+    margin: 0;                                                                    
+    background: url('/images/gui/newreleases/tooltip/footer.png') no-repeat;      
+}                                                                                 
+                                                                                  
+#movie-popup .info {                                                              
+    display: block;                                                               
+    clear: both;                                                                  
+    width: 308px;                                                                 
+    margin: 0;                                                                    
+    background: url('/images/gui/newreleases/tooltip/bg.png') repeat-y bottom;    
+}                                                                                 
+                                                                                  
+#movie-popup .info p {                                                            
+    margin: 0;                                                                    
+    padding: 5px;                                                                 
+    line-height: 1.5;                                                             
+}                                                                                 
+

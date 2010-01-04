@@ -1,0 +1,99 @@
+/*
+#newreleases {
+	width: 360px;
+	padding: 0;
+}
+
+#newreleases h3 {
+	width: 360px;
+	height: 28px;
+	padding: 0;
+	margin: 0;
+	background: url('/images/gui/newreleases/header.png') no-repeat top;
+}
+
+#newreleases .footer {
+	width: 360px;
+	height: 10px;
+	padding: 0;
+	margin: 0;
+	background: url('/images/gui/newreleases/footer.png') no-repeat;
+}
+
+#newreleases table {
+	width: 100%;
+	border: 0;
+	background: url('/images/gui/newreleases/bg.png') repeat-y;
+}
+
+#newreleases table td {
+	width: 25%;
+	text-align: center;
+	vertical-align: top;
+}
+
+#newreleases a {
+	display: block;
+	width: 80px;
+	height: 125px;
+	text-align: center;
+	font-size: 9px;
+	line-height: 18px;
+	text-decoration: none;
+}
+
+#newreleases a:hover {
+	background: url('/images/gui/newreleases/cover_hover.png') no-repeat;
+}
+
+#newreleases a img {
+	margin-top: 5px;
+	border: 0;
+}
+
+.hidden {
+	display: none;
+}
+*/
+#movie-popup {
+    display: block;
+	position: relative;
+	top: 0px;
+    width: 308px;
+    margin: 0;
+    padding: 0;
+	z-index: 20000000;
+}
+#movie-popup h3 {
+    display: block;
+    width: 308px;
+    height: 35px;
+    line-height: 30px;
+    background: url('/images/gui/newreleases/tooltip/header.png') no-repeat;
+    margin: 0;
+    padding: 0;
+    text-indent: 10px;
+    font-size: 10pt;
+    color: #fff;
+}
+
+#movie-popup .footer {
+    width: 308px;
+    height: 16px;
+    margin: 0;
+    background: url('/images/gui/newreleases/tooltip/footer.png') no-repeat;
+}
+
+#movie-popup .info {
+    display: block;
+    clear: both;
+    width: 308px;
+    margin: 0;
+    background: url('/images/gui/newreleases/tooltip/bg.png') repeat-y bottom;
+}
+
+#movie-popup .info p {
+    margin: 0;
+    padding: 5px;
+    line-height: 1.5;
+}

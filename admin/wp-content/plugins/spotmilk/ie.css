@@ -1,0 +1,63 @@
+/*
+This CSS is separately made from spotmilk.css.
+All the CSS properties used here are supposed to work in IE6 & 7 and other numerous Trident-based browsers.
+*/
+
+/*** Table ***/
+/* IE6 & 7 render tables differently from others */
+table, td, th {
+	border-width: 1px !important;
+	}
+
+/*** Header ***/
+/* IE6 does not support PNG with alpha channel */
+* html #wphead h1 span a:hover {
+	color: #fff !important;
+	text-decoration: underline; !important;
+	background: none !important;
+	}
+* html #user_info a {
+	position: relative;
+	top: 2px;
+	right: 0;
+	visibility: visible;
+	text-align: center;
+	}
+* html #user_info a:hover {
+	color: #fff !important;
+	text-decoration: underline !important;
+	background: none !important;
+	}
+
+/*** Menu ***/
+/* IE6 does not support transparent border color */
+* html #adminmenu a, #adminmenu a:hover, #adminmenu .current {
+	border: none !important;
+	}
+* html #submenu a {
+	border-color: #e6e6e6 !important;
+	}
+* html #submenu a:hover, #submenu .current {
+	border-bottom-width: 4px !important;
+	}
+
+/*** Sidebar ***/
+/* IE6 does not support PNG with alpha channel */
+* html a.dbx-toggle, a.dbx-toggle:visited {
+	background: url(images/inactive-toggle-buttons.gif) no-repeat !important;
+	}
+* html a.dbx-toggle:hover {
+	background: url(images/active-toggle-buttons.gif) no-repeat !important;
+	}
+
+/*** Banner ***/
+/* Give some space at the top and bottom of the Browse Happy banner */
+.bh {
+	margin: 15px 0;
+	}
+
+/*** For Other Plugins ***/
+/* ShortStat & SlimStat */
+#wp_shortstat .module h3, #wp_slimstat .module h3, #wp_slimstat .modulewide h3 {
+	border-bottom: none !important;
+	}

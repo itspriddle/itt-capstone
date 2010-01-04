@@ -1,0 +1,273 @@
+body, html {
+	margin: 0;
+}
+body {
+	background: #fff url(/images/admin/page-background.jpg) repeat-x;
+	font-family: Verdana, Arial, sans-serif;
+	font-size: 10pt;
+}
+
+#container {
+	width: 760px;
+	margin: auto;
+	/*background: url(/images/mr_admin_bg.png) repeat-y;*/
+	/*border-bottom: 1px solid #017CC1;*/
+}
+
+#top {
+	width: 760px;
+	height: 142px;
+	margin: 0;
+}
+
+#top h1 {
+	/*width: 770px;
+	height: 83px;*/
+	/*background: url(/images/mr_admin_head.png) no-repeat;*/
+	width: 760px;
+	height: 58px;
+	background: url(/images/admin/header.jpg) no-repeat;
+	padding: 0px;
+	margin: 64px 0 0 0;
+}
+#top h1 a {
+	width: 270px;
+	height: 58px;
+	display: block;
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+	
+#top h1 span {
+	display: none;
+}
+
+#navigation {
+	/*background: #CCE5F3;
+	border-bottom: 1px solid #017CC1;
+	border-top: 1px solid #017CC1;*/
+	font-size: 8pt;
+	margin: auto;
+	width: 760px;
+	height: 20px;
+	padding: 0;
+}
+#navigation a {
+	text-indent: 17px;
+}
+#navigation a.parent {
+	display: block;
+	width: 190px;
+	height: 20px;
+	float: left;
+	font-weight: bold;
+	line-height: 20px;
+	text-decoration: none;
+	text-indent: 8px;
+}
+
+#navigation a.parent:link, 
+#navigation a.parent:active,
+#navigation a.parent:visited {
+	/*background: url(/images/mr_admin_nav.png);
+	background-position: 0 0;*/
+	color: #fff;
+}
+
+#navigation a.parent:hover {
+	/*background: url(/images/mr_admin_nav.png);
+	background-position: 0 22px;*/
+	color: #fff;
+}
+
+#navigation a.nav1 {
+	background: url(/images/admin/nav1.jpg) no-repeat;
+}
+
+#navigation a.nav2 {
+	background: url(/images/admin/nav2.jpg) no-repeat;
+}
+
+#navigation a.nav3 {
+	background: url(/images/admin/nav3.jpg) no-repeat;
+}
+
+#navigation a.nav4 {
+	background: url(/images/admin/nav4.jpg) no-repeat;
+}
+
+#subnav {
+	position: relative;
+	top: 4px;
+	height: 19px;
+	line-height: 19px;
+}
+
+#content {
+	position: relative;
+	top: -63px;
+	border-bottom: 1px solid #3E3C3D;
+	background: url(/images/admin/content-background.jpg) repeat-y;
+	padding: 10px;
+}
+
+#top ul {
+	list-style-type: none;
+	margin-left: 0;
+	padding: 0;
+}
+#top ul li {
+	margin-left: 0;
+}
+fieldset {
+	border: 0;
+	margin-bottom: 10px;
+}
+
+h3 {
+	margin-bottom: 3px;
+}
+
+.dropdown {
+	position:absolute;
+	visibility: hidden;
+	border: 1px solid #3E3C3D;
+	border-bottom-width: 0;
+	/*font:normal 12px Verdana;*/
+	line-height: 18px;
+	z-index: 100;
+	/*background-color: #CCE5F3;*/
+	width: 189px;
+}
+.bg1 {
+	background: url(/images/admin/dropdown-bg1.jpg) repeat-y;
+}
+.bg2 {
+	background: url(/images/admin/dropdown-bg2.jpg) repeat-y;
+}
+.bg3 {
+	background: url(/images/admin/dropdown-bg3.jpg) repeat-y;
+}
+.bg4 {
+	background: url(/images/admin/dropdown-bg4.jpg) repeat-y;
+	width: 188px;
+}
+.dropdown a {
+	width: 100%;
+	display: block;
+	border-bottom: 1px solid #3E3C3D;
+	padding: 1px 0;
+	text-decoration: none;
+	font-weight: bold;
+	color: #FFF;
+}
+
+.dropdown a:hover {
+	color: #3E3C3D;
+}
+
+.bg1 a:hover { 
+	background: url(/images/admin/dropdown-bg1-over.jpg);
+}
+.bg2 a:hover { 
+	background: url(/images/admin/dropdown-bg2-over.jpg);
+}
+.bg3 a:hover { 
+	background: url(/images/admin/dropdown-bg3-over.jpg);
+}
+.bg4 a:hover { 
+	background: url(/images/admin/dropdown-bg4-over.jpg);
+}
+
+.page_content {
+	margin-bottom: 15px;
+}
+
+.splash {
+	width: 740px;
+	height: 44px;
+	margin-bottom: 10px;
+	background: url(/images/mr_admin_splash_bg.gif);
+	line-height: 44px;
+	text-indent: 10px;
+}
+
+#server-overview {
+	width: 515px;
+	float: right;
+}
+div.content-box {
+	width: 245px;
+	font-size: 8pt;
+	background: #eee;
+	border: 1px solid #666;
+	margin: 0 0 10px 10px;
+	padding: 10px 0 10px 0;
+}
+
+div.content-box h3,
+div.content-box p {
+	width: 90%;
+}
+
+.stats-left {
+	float: left;
+}
+
+.stats-right {
+	float: right;
+}
+
+.moviestats {
+	float: left;
+}
+
+.showstats {
+	float: left;
+}
+
+.content-box h3 {
+	margin: 0 auto 2px auto;
+	padding: 0:
+}
+.content-box p {
+	margin: 3px auto 3px auto;
+}
+
+.graph {
+	width: 90%;
+	height: 20px;
+	border: 1px solid #3E3C3D;
+	line-height: 18px;
+	color: #000;
+	text-align: center;
+	margin: 0 auto;
+}
+
+.graph .used {
+	height: 100%;
+	background-color: #69c;
+	color: #000;
+}
+
+.graph-text {
+	z-index: 1500;
+	width: 100%;
+	height: 18px;
+	line-height: 20px;
+	color: #000;
+	font-weight: bold;
+	text-align: center;
+	margin: 0;
+	clear: none;
+	position: relative;
+	top: -20px;
+}
+
+
+
+br.clear {
+	clear: both; 
+	font-size: 1px;
+}

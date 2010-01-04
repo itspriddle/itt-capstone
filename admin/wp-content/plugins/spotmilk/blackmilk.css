@@ -1,0 +1,70 @@
+/*
+This CSS is separately made from spotmilk.css.
+All the CSS properties used here are for BlackMilk, the Black edition of SpotMilk, which is optional.
+*/
+
+@import "spotmilk.css";
+
+body {
+	background: #3f3f3f;
+	}
+a {
+	color: #19323f;
+	}
+a:visited {
+	color: #2d5970;
+	}
+a:hover {
+	color: #2d5970;
+	border-bottom: 1px solid #2d5970;
+	}
+#wphead {
+	background: url(images/header-blackmilk.png) repeat-x;
+	}
+#submenu a:hover, #submenu .current {
+	background: #3f3f3f;
+	color: #fff;
+	border-left-color: transparent !important;
+	border-top-color: transparent !important;
+	border-right-color: transparent !important;
+	border-bottom-color: #3f3f3f !important;
+	text-shadow: 0 2px 2px #000;
+	}
+#copyright a, #logo a {
+	color: #fff;
+	}
+#copyright, #logo, #copyright a:hover, #logo a:hover {
+	color: #ccc;
+	}
+
+/*** For Other Plugins ***/
+/* ShortStat & SlimStat */
+#wp_shortstat a, #wp_slimstat a {
+	color: #19323f !important;
+	}
+#wp_shortstat a:visited, #wp_slimstat a:visited {
+	color: #2d5970 !important;
+	}
+#wp_shortstat a:hover, #wp_slimstat a:hover {
+	color: #2d5970 !important;
+	}
+
+/* PopStats */
+#ps_popstats a {
+	color: #19323f !important;
+	}	
+#ps_popstats a:visited {
+	color: #2d5970 !important;
+	}
+#ps_popstats a:hover {
+	color: #2d5970 !important;
+	border-bottom-color: #2d5970 !important;
+	}
+.ps_statbar {
+	background-color: #2d5970 !important;
+	border-bottom-color: #2d5970 !important;
+	}
+.ps_statbar_av {
+	background-color: #19323f !important;
+	border-bottom-color: #19323f !important;
+	}

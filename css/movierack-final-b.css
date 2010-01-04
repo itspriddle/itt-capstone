@@ -1,0 +1,309 @@
+/******************************************************************************
+ * movierack-final.css
+ *
+ * Created by Joshua Priddle on 2/12/2007
+ * For movierack.net and ITT IT314 (Web Capstone)
+ */
+
+body,td,th {
+	font-family: Tahoma, Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+}
+body,html {
+	height: 100%;
+}
+body {
+	background: #fff url(/images/styles/main/page-background.jpg) repeat-x;
+	margin: 0;
+}
+
+#overall {
+	width: 950px;
+	
+	margin: 0 auto;
+}
+
+#top {
+	position: relative;
+	top: 20px;
+	width: 950px;
+	height: 100px;
+	margin: 0;
+	z-index: 1000;
+}
+	#top h1 {
+		margin: 0;
+		padding: 0;
+		width: 950px;
+		height: 61px;
+		background: url(/images/styles/main/page-header.jpg) no-repeat;
+	}
+		#top h1 span {
+			display: none;
+		}
+		
+	ul#nav {
+		padding: 0;
+		margin: 0;
+		list-style: none;
+	}
+		ul#nav li {
+			display: block;
+			float: left;
+			width: 158px;
+			height: 40px;
+		}
+		
+		ul#nav a {
+			display: block;
+			border: 0;
+			width: 158px;
+			height: 40px;
+		}
+			ul#nav li#nav-signup a {
+				width: 160px;
+			}
+			ul#nav li#nav-signup {
+				width: 160px;
+			}
+		
+		ul#nav li a span {
+			display: none;
+		}
+		
+		#nav-home a {
+			background: url(/images/styles/main/home-off.jpg) no-repeat;
+		}
+		#nav-new a {
+			background: url(/images/styles/main/new-off.jpg) no-repeat;
+		}
+		#nav-browse a {
+			background: url(/images/styles/main/browse-off.jpg) no-repeat;
+		}
+		#nav-reviews a {
+			background: url(/images/styles/main/reviews-off.jpg) no-repeat;
+		}
+		#nav-forums a {
+			background: url(/images/styles/main/forums-off.jpg) no-repeat;
+		}
+		#nav-signup a {
+			background: url(/images/styles/main/signup-off.jpg) no-repeat;
+		}
+		
+	
+#content {
+	position: relative;
+	top: 20px;
+	height: 100%;
+	border-bottom: 1px solid #3E3C3D;
+	background: url(/images/styles/main/content-bg-full.jpg) repeat-y;
+}
+
+#content.homepage {
+	background: url(/images/styles/main/content-bg.gif) repeat-y;
+}
+
+
+
+#content-left {
+	position: relative;
+	width: 200px;
+	float: left;
+}
+	#content-left #login {
+		width: 200px;
+		background: url(/images/styles/main/login-form-bg.jpg) repeat-y;
+		border-bottom: 1px solid #3E3C3D;
+		padding-bottom: 10px;
+	}
+	
+	#content-left #login h2 {
+		display: block;
+		width: 200px;
+		height: 22px;
+		background: url(/images/styles/main/login-form-head.jpg);
+		color: #fff;
+		margin: 0;
+		line-height: 19px;
+		padding: 0;
+		font-size: 100%;
+		font-weight: bold;
+		text-indent: 10px;
+	}
+
+		#login #loginform {
+			width: 160px;
+			margin: auto;
+			font-size: 100%;
+		}
+	
+	#content-left #login p {
+		width: 160px;
+		margin: 10px auto;
+	}
+	
+#content-middle {
+	position: relative;
+	float: left;
+	width: 490px;
+	
+}
+
+	#welcome {
+		position: relative;
+		top: 22px;
+		background: url(/images/styles/main/welcome-background.jpg) no-repeat;
+		width: 490px;
+		height: 222px;
+	}
+	
+	#welcome p {
+		display: none;
+	}
+#content-right {
+	position: relative;
+	width: 250px;
+	float: right;
+}
+
+	#search {
+		width: 250px;
+		background: url(/images/styles/main/search-form-bg.jpg) repeat-y;
+		border-bottom: 1px solid #3E3C3D;
+		font-size: 100%;
+	}
+	
+	#search h2 {
+		display: block;
+		width: 250px;
+		height: 22px;
+		background: url(/images/styles/main/search-form-head.jpg);
+		color: #fff;
+		margin: 0;
+		line-height: 19px;
+		padding: 0;
+		font-size: 100%;
+		font-weight: bold;
+		text-indent: 10px;
+	}
+	#advanced-search {
+		display: none;
+	}
+	#search-results div.search, 
+	#search-results div.results {
+		padding: 10px;
+	}
+	
+    #search-results h2 {
+		position: relative;
+		top: 1px;
+        display: block;
+        width: 950px;
+        height: 22px;
+        background: url(/images/styles/main/search-res-head.jpg);
+        color: #fff;
+        margin: 0;
+        line-height: 19px;
+        padding: 0;
+        font-size: 100%;
+        font-weight: bold;
+        text-indent: 10px;
+    }
+
+	#reviews {
+		
+	}
+
+    #reviews h2 {
+        position: relative;
+        top: 1px;
+        display: block;
+        width: 950px;
+        height: 22px;
+        background: url(/images/styles/main/reviews-head-full.jpg);
+        color: #fff;
+        margin: 0;
+        line-height: 19px;
+        padding: 0;
+        font-size: 100%;
+        font-weight: bold;
+        text-indent: 10px;
+    }
+    #browse h2 {
+        position: relative;
+        top: 1px;
+        display: block;
+        width: 950px;
+        height: 22px;
+        background: url(/images/styles/main/browse-head-full.jpg);
+        color: #fff;
+        margin: 0;
+        line-height: 19px;
+        padding: 0;
+        font-size: 100%;
+        font-weight: bold;
+        text-indent: 10px;
+    }
+    #new h2 {
+        position: relative;
+        top: 1px;
+        display: block;
+        width: 950px;
+        height: 22px;
+        background: url(/images/styles/main/new-head-full.jpg);
+        color: #fff;
+        margin: 0;
+        line-height: 19px;
+        padding: 0;
+        font-size: 100%;
+        font-weight: bold;
+        text-indent: 10px;
+    }
+    #register h2 {
+        position: relative;
+        top: 1px;
+        display: block;
+        width: 950px;
+        height: 22px;
+        background: url(/images/styles/main/new-head-full.jpg);
+        color: #fff;
+        margin: 0;
+        line-height: 19px;
+        padding: 0;
+        font-size: 100%;
+        font-weight: bold;
+        text-indent: 10px;
+    }
+
+	table#new-movies {
+		width: 70%;
+	}
+		table#new-movies td {
+			width: 16%;
+			vertical-align: top;
+			text-align: center;
+		}
+
+#footer {
+	position: relative;
+	clear: both;
+	margin-top: 10px;
+	width: 950px;
+	height: 50px;
+	background: url(/images/styles/main/footer-bg.jpg) no-repeat;
+	font-size: 100%;
+	text-align: right;
+}
+
+#footer p {
+	margin: 5px;
+	line-height: 1.5;
+}
+
+table#filter-genres {
+	width: 100%;
+}
+	table#filter-genres td {
+		padding: 0;
+		margin: 0;
+}

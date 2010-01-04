@@ -1,0 +1,12 @@
+/*
+This CSS is separately made from spotmilk.css.
+All the CSS properties used here are Mozilla-proprietary and supposed to work in Gecko-based browsers, such as Netscape, SeaMonkey/Mozilla, Firefox, Camino, Flock, K-Meleon, Sleipnir, Galeon, Epiphany, Kazehakase, etc.
+*/
+
+.wrap, .updated {
+	-moz-border-radius: 10px;
+	}
+#submenu a:hover, #submenu .current {
+	-moz-border-radius-topleft: 6px;
+	-moz-border-radius-topright: 6px;
+	}

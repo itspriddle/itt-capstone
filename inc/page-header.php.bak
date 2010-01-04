@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>movierack<?php if ( isset( $page_title ) ) echo " &raquo; $page_title"; ?></title>
+<script type="text/javascript" src="/js/ajax-dynamic-content.js"></script>
+<script type="text/javascript" src="/js/ajax.js"></script>
+<script type="text/javascript" src="/js/ajax-tooltip.js"></script>
+<?php // CSS Picker would go here ?>
+
+<link rel="stylesheet" type="text/css" href="/css/movierack.css" />
+
+<link rel="stylesheet" href="/css/ajax-tooltip.css" media="screen" type="text/css" />
+<link rel="stylesheet" href="/css/movierack-main-a.css" media="screen" type="text/css" />
+
+</head>
+<body>
+<div id="overall">
+
+  <div id="top">
+    <h1><span class="hidden">Movierack</span></h1>
+    <div id="navigation">
+      <ul id="navlinks">
+        <li><a href="/">Home</a></li>
+        <li><a href="/about.php">About</a></li>
+        <li><a href="/new.php">New Movies</a></li>
+        <li><a href="/browse.php">Browse Movies</a></li>
+        <li><a href="/reviews.php">Reviews</a></li>
+        <li><a href="/signup.php">Sign Up</a></li>
+      </ul>
+<!--// OLD NAVIGATION
+      <div class="link"><a href="/index.php">Home</a></div>
+      <div class="link"><a href="/about.php">About</a></div> 
+      <div class="link"><a href="/new.php">New Movies</a></div>
+      <div class="link"><a href="/reviews.php">Reviews</a></div>
+      <div class="link"><a href="/browse.php">Browse</a></div>
+//-->
+      <div class="search">
+        <form id="search-form" name="search-form" action="/search.php" method="post">
+          <input type="text" id="search-text" name="search" />
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div id="content">

@@ -1,0 +1,12 @@
+/*
+This CSS is separately made from spotmilk.css.
+All the CSS properties used here are Apple-proprietary and supposed to work in WebKit-based browsers, such as Safari, OmniWeb, Shiira, DeskBrowse, SunriseBrowser, Swift, etc.
+*/
+
+.wrap, .updated {
+	-webkit-border-radius: 10px;
+	}
+#submenu a:hover, #submenu .current {
+	-webkit-border-top-left-radius: 6px;
+	-webkit-border-top-right-radius: 6px;
+	}

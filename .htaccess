@@ -1,0 +1,54 @@
+#Redirect /admin http://admin.movierack.net [R=Permanent]
+<Files signup.php>
+	AuthName "Movierack Signup"
+	AuthType Basic
+	AuthUserFile /home/priddle/.htpasswds/signup
+	Satisfy any
+	<Limit GET POST>
+		Order Deny,Allow
+		Deny from all
+		Allow from 216.120.
+		require valid-user
+	</Limit>
+</Files>
+
+
+Options +FollowSymlinks
+
+#Redirect /inc http://movierack.net [R=301]
+
+RewriteEngine on
+
+RewriteRule ^\/$ index.php [nc]
+
+RewriteRule ^new\/?$ new.php [nc]
+
+
+RewriteRule ^shows\/?$		shows.php [nc]
+RewriteRule ^shows\/(.+)	shows.php?name=$1 [nc]
+
+RewriteRule ^movies\/([0-9]+)$ movie.php?m=$1 [nc]
+#RewriteRule ^movies\/([a-z]{3})([0-9]+)([a-z]{4})$ movie.php?m=$2 [nc]
+
+RewriteRule ^reviews\/?$ reviews.php [nc]
+
+RewriteRule ^terms\/?$ terms.php [nc]
+
+RewriteRule ^browse\/?$ browse.php [nc]
+RewriteRule ^browse\/(.+)\/?$ browse.php?filter=$1 [nc]
+RewriteRule ^browse\/(.+)\/(.+)$ browse.php?filter=$1&start=$2 [nc]
+
+RewriteRule ^signup\/?$ signup.php [nc]
+
+RewriteRule ^feed\/rss\/?$ rss.php [nc]
+RewriteRule ^feed\/rss2\/?$ rss2.php [nc]
+
+
+#RewriteCond %{HTTP_HOST} !^www\.movierack\.net$
+#RewriteCond %{HTTP_HOST} ([^.]+)\.movierack\.net$ [NC]
+#RewriteRule ^(.*)$ http://movierack.net/foo/index.php?page=$1 [L,R]
+
+#RewriteBase /
+#RewriteCond %{HTTP_HOST} !www.movierack.net$ [NC]
+#RewriteCond %{HTTP_HOST} ^(www.)?([a-z0-9-]+).movierack.net [NC]
+#RewriteRule (.*) %2/$1 [L]
